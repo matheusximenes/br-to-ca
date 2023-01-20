@@ -1,0 +1,38 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@auth0/auth0-react": "^1.4.0",
+    "next": "latest",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "name": "blog-brazil-to-canada",
+  "description": "This is a starter template for [Learn Next.js](https://nextjs.org/learn).",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheusximenes/br-to-ca.git"
+  },
+  "keywords": [
+    "blog",
+    "canada",
+    "brazil"
+  ],
+  "author": "Matheus Ximenes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matheusximenes/br-to-ca/issues"
+  },
+  "homepage": "https://github.com/matheusximenes/br-to-ca#readme"
+}
