@@ -1,8 +1,8 @@
 import 'tailwindcss/tailwind.css'
 
 import Head from 'next/head'
-import Header from '../components/Header'
 import { Auth0Provider } from '@auth0/auth0-react'
+import AppTemplate from '../components/main/AppTemplate'
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -17,12 +17,9 @@ export default function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>My awesome blog</title>
       </Head>
-
-      <Header />
-
-      <main className="py-14">
+      <AppTemplate>
         <Component {...pageProps} />
-      </main>
+      </AppTemplate>
     </Auth0Provider>
   )
 }
