@@ -1,18 +1,12 @@
 import 'tailwindcss/tailwind.css'
 
 import Head from 'next/head'
-import { Auth0Provider } from '@auth0/auth0-react'
+import { UserProvider } from '@auth0/nextjs-auth0/client'
 import AppTemplate from '../components/main/AppTemplate'
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <Auth0Provider
-      clientId={process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID}
-      domain={process.env.NEXT_PUBLIC_AUTH0_DOMAIN}
-      //   authorizationParams={{
-      //     redirect_uri: window.location.origin,
-      //   }}
-    >
+    <UserProvider>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>My awesome blog</title>
@@ -20,6 +14,6 @@ export default function MyApp({ Component, pageProps }) {
       <AppTemplate>
         <Component {...pageProps} />
       </AppTemplate>
-    </Auth0Provider>
+    </UserProvider>
   )
 }
