@@ -17,7 +17,6 @@ const MainNavigation = () => {
     <nav>
       <ul>
         <li>
-          {user && <div>{JSON.stringify(user)}</div>}
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="/blog">Blog</Link>
