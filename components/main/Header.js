@@ -1,11 +1,12 @@
-import Link from 'next/link'
 import React from 'react'
 import MainNavigation from './MainNavigation'
+import logo from '../../public/logo.png'
+import Image from 'next/image'
 
 const Header = () => {
   return (
     <header>
-      <div>Logo</div>
+      <Image src="/logo.png" alt="logo" width={50} height={50} />
       <MainNavigation />
     </header>
   )

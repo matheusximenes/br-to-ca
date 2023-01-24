@@ -5,6 +5,36 @@ import { useUser } from '@auth0/nextjs-auth0/client'
 const MainNavigation = () => {
   const { user, error, isLoading } = useUser()
 
+  React.useEffect(() => {
+    const fetchUser = async () => {
+      if (user) {
+        console.log(user)
+        try {
+          let response = await fetch(`/api/users/${user.sid}`)
+          if (response.status === 404) {
+            console.log('here')
+            response = await fetch(`/api/users`, {
+              method: 'POST',
+              body: JSON.stringify({
+                name: user.name,
+                email: user.email,
+                imageUrl: user.picture || '',
+              }),
+              headers: {
+                'Content-type': 'application/json',
+              },
+            })
+          }
+          const data = await response.json()
+          console.log(data)
+        } catch (error) {
+          console.error(error.message)
+        }
+      }
+    }
+    fetchUser()
+  }, [user])
+
   if (isLoading) {
     return <>Loading...</>
   }
