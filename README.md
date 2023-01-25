@@ -12,12 +12,14 @@
 
 ### Known Issues:
 * Auth0 Only works on Localhost
+* MongoDB Connection only works in Localhost
 
 
 #### Some Working Features
 * Main Structure
 * Navigation
-* Tailwindcss
+* API Connecting with MongoDB using mongoose
+* TailWindCss
 * Fetching Mockup Posts (Will be removed)
 * Auth0 - Google Accounts and User + Password
 * 404 Page
