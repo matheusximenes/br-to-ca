@@ -17,6 +17,7 @@
 #### Some Working Features
 * Main Structure
 * Navigation
-* TailWindcss
+* Tailwindcss
 * Fetching Mockup Posts (Will be removed)
 * Auth0 - Google Accounts and User + Password
+* 404 Page
