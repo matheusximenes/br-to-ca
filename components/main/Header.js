@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const Header = () => {
   return (
-    <header>
+    <header className="p-2 bg-state-500 flex">
       <Image src="/logo.png" alt="logo" width={50} height={50} />
       <MainNavigation />
     </header>

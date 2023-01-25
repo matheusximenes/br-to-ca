@@ -10,9 +10,7 @@ export default async function handler(req, res) {
   } = req
   const { name, email, imageUrl } = req.body
 
-  console.log('#### Connecting ###')
   await dbConnect()
-  console.log('#### Connected ###')
 
   switch (method) {
     case 'GET':
